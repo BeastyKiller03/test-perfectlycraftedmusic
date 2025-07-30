@@ -52,3 +52,32 @@ body {
   object-fit: contain;
   border-radius: 4px;
 }
+
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.footer img {
+  max-width: 200px;
+  height: auto;
+  opacity: 0.9;
+}
+
+.background-section {
+  padding: 60px 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #000;
+}
+
+.background-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.background-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
