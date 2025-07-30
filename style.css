@@ -1,0 +1,26 @@
+body {
+  background-color: #121212;
+  color: #fefefe;
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #ff5f5f;
+}
+
+a {
+  color: #66ccff;
+  text-decoration: none;
+  font-weight: bold;
+}
