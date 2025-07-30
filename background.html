@@ -3,53 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Background – PerfectlyCraftedMusic</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Background - PerfectlyCraftedMusic</title>
   <style>
     body {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 2rem;
       background-color: #fff;
       color: #000;
-      padding: 40px 20px;
+    }
+
+    .container {
       max-width: 700px;
       margin: 0 auto;
-      line-height: 1.7;
     }
 
     h2 {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 1rem;
+      margin-bottom: 2rem;
     }
 
     .back-link {
       display: inline-block;
-      margin-top: 40px;
+      font-size: 0.9rem;
+      color: black;
       text-decoration: none;
-      color: #000;
-      font-size: 0.95rem;
-      opacity: 0.7;
-      transition: opacity 0.2s;
     }
 
     .back-link:hover {
-      opacity: 1;
+      opacity: 0.6;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
-
-  <h2>Background</h2>
-  <p>
-    Marco Maria and Prince Youngblood are a creative duo blending sound, visual art, and DIY punk aesthetics.  
-    They met at a party, barely interacting, but followed each other on socials.  
-    A few casual meetups led to their first song.  
-    <br><br>
-    Their friendship solidified at Coachella 2022, where a random link-up sparked something real.  
-    Marco is the vocals, production, and creative director.  
-    Prince is the muse, the inspiration, the heart, and the fashion mind.
-  </p>
-
-  <a href="index.html" class="back-link">← Back</a>
-
+  <div class="container">
+    <h2>Background</h2>
+    <p>
+      Marco Maria and Prince Youngblood are a creative duo blending sound,
+      visual art, and DIY punk aesthetics. They met at a party, barely interacting,
+      but followed each other on socials. A few casual meetups led to their first song.
+    </p>
+    <p>
+      Their friendship solidified at Coachella 2022, where a random link-up sparked something real.
+      Marco is the vocals, production, and creative director. Prince is the muse, the inspiration,
+      the heart, and the fashion mind.
+    </p>
+    <a class="back-link" href="index.html">&larr; Back</a>
+  </div>
 </body>
 </html>
