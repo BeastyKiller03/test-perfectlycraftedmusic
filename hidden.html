@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>System Error</title>
   <style>
     body {
@@ -13,11 +14,16 @@
       font-size: 16px;
       line-height: 1.6;
       white-space: pre-wrap;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
     }
 
     .center {
       margin-top: 50px;
-      text-align: center;
     }
 
     .windows {
@@ -54,13 +60,16 @@ Error: 0E : 016F : BFF9B3D4
   </p>
 
   <div class="center">
-    Press any key to continue<span class="blink">_</span>
+    Press any key or tap to continue<span class="blink">_</span>
   </div>
 
   <script>
-    document.body.addEventListener('keydown', () => {
-      window.location.href = 'story.html'; // Change this path to your real story page
-    });
+    function goToStory() {
+      window.location.href = 'story.html';
+    }
+
+    document.addEventListener('keydown', goToStory);
+    document.addEventListener('touchstart', goToStory);
   </script>
 </body>
 </html>
