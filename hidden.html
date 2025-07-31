@@ -39,7 +39,7 @@
     }
   </style>
 </head>
-<body>
+<body tabindex="0">
   <div class="windows">Windows</div>
 
   <p>
@@ -56,5 +56,11 @@ Error: 0E : 016F : BFF9B3D4
   <div class="center">
     Press any key to continue<span class="blink">_</span>
   </div>
+
+  <script>
+    document.body.addEventListener('keydown', () => {
+      window.location.href = 'story.html'; // Change this path to your real story page
+    });
+  </script>
 </body>
 </html>
