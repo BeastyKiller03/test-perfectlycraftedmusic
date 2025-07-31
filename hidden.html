@@ -2,34 +2,59 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to the Void</title>
+  <title>System Error</title>
   <style>
     body {
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      background-color: #000;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       margin: 0;
-      padding: 2rem;
+      padding: 40px;
+      background-color: #0000AA;
+      color: white;
+      font-family: 'Lucida Console', Monaco, monospace;
+      font-size: 16px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+
+    .center {
+      margin-top: 50px;
       text-align: center;
     }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+
+    .windows {
+      background-color: #C0C0C0;
+      color: black;
+      display: inline-block;
+      padding: 2px 8px;
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 20px;
     }
-    p {
-      font-size: 1.2rem;
-      max-width: 500px;
+
+    .blink {
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
     }
   </style>
 </head>
 <body>
-  <h1>You Found the Secret</h1>
-  <p>This page doesn't exist on the map. This is a message to the ones looking deeper. Keep going. The code isn't the end — it's a beginning.</p>
+  <div class="windows">Windows</div>
+
+  <p>
+An error has occurred. To continue:
+
+Press Enter to return to Windows, or
+
+Press CTRL+ALT+DEL to restart your computer. If you do this,
+you will lose any unsaved information in all open applications.
+
+Error: 0E : 016F : BFF9B3D4
+  </p>
+
+  <div class="center">
+    Press any key to continue<span class="blink">_</span>
+  </div>
 </body>
 </html>
