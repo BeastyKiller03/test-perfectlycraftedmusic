@@ -40,10 +40,10 @@
   </style>
 </head>
 <body>
-  <h2>.:PM TETRIS:.</h2>
+  <h2>.::pm:.</h2>
   <canvas id="tetris" width="240" height="400"></canvas>
   <div id="score">Score: 0</div>
-  <button id="loreButton" onclick="window.location.href='lore.html'">Access Hidden Lore</button>
+  <button id="loreButton" onclick="window.location.href='lore1.html'">Access Hidden Lore</button>
 
   <script>
     const canvas = document.getElementById('tetris');
@@ -68,7 +68,7 @@
 
         document.getElementById('score').textContent = `Score: ${player.score}`;
 
-        if (player.score >= 500) {
+        if (player.score >= 200) {
           document.getElementById('loreButton').style.display = 'inline-block';
         }
       }
