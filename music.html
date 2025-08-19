@@ -8,9 +8,10 @@
     body {
       margin: 0;
       padding: 0;
-      background: url('IMG_7789.jpg') no-repeat center center fixed;
+      background: url('IMG_7789.jpg') no-repeat center top;
       background-size: cover;
-      height: 100vh;
+      background-attachment: scroll;
+      min-height: 100vh;
       position: relative;
     }
 
@@ -19,21 +20,28 @@
       width: 180px;
       height: 30px;
       cursor: pointer;
+      /* TEMP: Add visible border for testing */
+      border: 1px solid red;
     }
 
     .spotify {
-      top: 160px; /* adjust as needed */
-      left: 90px; /* adjust as needed */
+      top: 160px;
+      left: 90px;
     }
 
     .apple {
-      top: 210px; /* adjust as needed */
+      top: 220px;
       left: 90px;
     }
 
     .soundcloud {
-      top: 260px; /* adjust as needed */
+      top: 280px;
       left: 90px;
+    }
+
+    /* Add space to allow scrolling */
+    .spacer {
+      height: 2000px;
     }
   </style>
 </head>
@@ -41,7 +49,9 @@
 
   <a href="https://open.spotify.com/artist/247dlsOKRglAdfudQLdCPG" target="_blank" class="link spotify"></a>
   <a href="https://music.apple.com/us/artist/pm/1827761643" target="_blank" class="link apple"></a>
-  <a href="https://soundcloud.com/prince-marco-278939286" target="_blank" class="link soundcloud"></a> <!-- replace link with actual -->
+  <a href="https://soundcloud.com/prince-marco-278939286" target="_blank" class="link soundcloud"></a>
+
+  <div class="spacer"></div> <!-- Just to enable scrolling -->
 
 </body>
 </html>
