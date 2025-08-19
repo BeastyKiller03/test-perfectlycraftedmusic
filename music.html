@@ -10,37 +10,33 @@
       padding: 0;
       background: url('IMG_7789.jpg') no-repeat center top;
       background-size: cover;
-      background-attachment: scroll;
-      min-height: 100vh;
+      background-attachment: fixed;
+      font-family: sans-serif;
+      height: 200vh; /* allows scrolling */
       position: relative;
     }
 
-   .link {
-  width: 300px;
-  height: 67px;
-  cursor: pointer;
-  border: 1px solid red; /* for debugging, remove later */
-  position: absolute;
-}
+    .link {
+      position: absolute;
+      width: 300px;
+      height: 67px;
+      cursor: pointer;
+      /* border: 1px solid red; */ /* Uncomment if you want to debug box position */
+    }
 
-.spotify {
-  top: 620px;
-  left: 230px;
-}
+    .spotify {
+      top: 620px;
+      left: 230px;
+    }
 
-.apple {
-  top: 855px;
-  left: 250px;
-}
+    .apple {
+      top: 855px;
+      left: 250px;
+    }
 
-.soundcloud {
-  top: 1080px;
-  left: 230px;
-}
-
-    /* Add space to allow scrolling */
-    .spacer {
-      height: 2000px;
+    .soundcloud {
+      top: 1080px;
+      left: 230px;
     }
   </style>
 </head>
@@ -49,8 +45,6 @@
   <a href="https://open.spotify.com/artist/247dlsOKRglAdfudQLdCPG" target="_blank" class="link spotify"></a>
   <a href="https://music.apple.com/us/artist/pm/1827761643" target="_blank" class="link apple"></a>
   <a href="https://soundcloud.com/prince-marco-278939286" target="_blank" class="link soundcloud"></a>
-
-  <div class="spacer"></div> <!-- Just to enable scrolling -->
 
 </body>
 </html>
