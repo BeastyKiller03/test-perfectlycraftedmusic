@@ -15,29 +15,28 @@
       position: relative;
     }
 
-    .link {
-      position: absolute;
-      width: 180px;
-      height: 30px;
-      cursor: pointer;
-      /* TEMP: Add visible border for testing */
-      border: 1px solid red;
-    }
+   .link {
+  width: 220px;  /* wider hitbox */
+  height: 40px;  /* taller hitbox */
+  cursor: pointer;
+  border: 1px solid red; /* temporary */
+  position: absolute;
+}
 
-    .spotify {
-      top: 160px;
-      left: 90px;
-    }
+   .spotify {
+  top: 380px;   /* move down to line up with actual word */
+  left: 140px;  /* move to the right over the word */
+}
 
-    .apple {
-      top: 220px;
-      left: 90px;
-    }
+.apple {
+  top: 460px;
+  left: 140px;
+}
 
-    .soundcloud {
-      top: 280px;
-      left: 90px;
-    }
+.soundcloud {
+  top: 540px;
+  left: 140px;
+}
 
     /* Add space to allow scrolling */
     .spacer {
