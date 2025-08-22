@@ -3,58 +3,139 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PerfectlyCraftedMusic</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Photos - PerfectlyCraftedMusic</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-color: #fff;
+      color: #000;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 200px;
+      padding: 40px 20px;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+      flex-shrink: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      overflow-y: auto;
+      z-index: 1000;
+    }
+
+    .sidebar a {
+      color: #000;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: opacity 0.3s ease;
+    }
+
+    .sidebar a:hover {
+      opacity: 0.6;
+    }
+
+    .gallery {
+      margin-left: 240px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .gallery img {
+      width: 90%;
+      max-width: 600px;
+      height: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 1rem;
+      color: black;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      opacity: 0.6;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+        gap: 10px;
+      }
+
+      .gallery {
+        margin-left: 0;
+        padding: 20px;
+      }
+
+      .gallery img {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-
-  <!-- Floating top-right logo -->
-  <div class="top-corner-title">
-    <p>perfectlycraftedmusic</p>
+  <div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="videos.html">Videos</a>
+    <a href="music.html">Music</a>
+    <a href="photos.html">Photographs</a>
+    <a href="https://www.instagram.com/perfectlycraftedmusic/" target="_blank">Instagram</a>
+    <a href="https://tumblr.com/blog/marcoalexismaria" target="_blank">Tumblr</a>
+    <a href="mailto:perfectlycraftedmusic@gmail.com">Email</a>
+    <a href="background.html">Background</a>
   </div>
 
-  <!-- Sidebar with links -->
-  <div class="header">
-    <div class="links">
-      <a href="videos.html">Videos</a>
-      <a href="music.html">Music</a>
-      <a href="photos.html" class="background-link">Photographs</a>
-      <a href="https://www.instagram.com/perfectlycraftedmusic/" target="_blank">Instagram</a>
-      <a href="https://tumblr.com/blog/marcoalexismaria" target="_blank">Tumblr</a>
-      <a href="mailto:perfectlycraftedmusic@gmail.com">Email</a>
-      <a href="background.html" class="background-link">Background</a>
-    </div>
+  <div class="gallery">
+    <img id="img1" src="IMG_1.jpg" alt="Image 1">
+    <img id="img2" src="IMG_2.jpg" alt="Image 2">
+    <img id="img3" src="IMG_3.jpg" alt="Image 3">
+    <img id="img4" src="IMG_4.jpg" alt="Image 4">
+    <img id="img5" src="IMG_5.jpg" alt="Image 5">
+    <img id="img6" src="IMG_6.jpg" alt="Image 6">
+    <img id="img7" src="IMG_7.jpg" alt="Image 7">
+    <img id="img8" src="IMG_8.jpg" alt="Image 8">
+    <img id="img9" src="IMG_9.jpg" alt="Image 9">
+    <img id="img10" src="IMG_10.jpg" alt="Image 10">
+    <img id="img11" src="IMG_11.jpg" alt="Image 11">
+    <img id="img12" src="IMG_12.jpg" alt="Image 12">
+    <img id="img13" src="IMG_13.jpg" alt="Image 13">
+    <img id="img14" src="IMG_14.jpg" alt="Image 14">
+    <img id="img15" src="IMG_15.jpg" alt="Image 15">
+    <img id="img16" src="IMG_16.jpg" alt="Image 16">
+    <img id="img17" src="IMG_17.jpg" alt="Image 17">
   </div>
 
-  <!-- Image gallery to the right side -->
-  <div class="main-content">
-    <div class="gallery-row">
-      <a href="photos.html#img1"><img src="IMG_1.jpg" alt="Image 1" /></a>
-      <a href="photos.html#img2"><img src="IMG_2.jpg" alt="Image 2" /></a>
-      <a href="photos.html#img3"><img src="IMG_3.jpg" alt="Image 3" /></a>
-      <a href="photos.html#img4"><img src="IMG_4.jpg" alt="Image 4" /></a>
-      <a href="photos.html#img5"><img src="IMG_5.jpg" alt="Image 5" /></a>
-      <a href="photos.html#img6"><img src="IMG_6.jpg" alt="Image 6" /></a>
-      <a href="photos.html#img7"><img src="IMG_7.jpg" alt="Image 7" /></a>
-      <a href="photos.html#img8"><img src="IMG_8.jpg" alt="Image 8" /></a>
-      <a href="photos.html#img9"><img src="IMG_9.jpg" alt="Image 9" /></a>
-      <a href="photos.html#img10"><img src="IMG_10.jpg" alt="Image 10" /></a>
-      <a href="photos.html#img11"><img src="IMG_11.jpg" alt="Image 11" /></a>
-      <a href="photos.html#img12"><img src="IMG_12.jpg" alt="Image 12" /></a>
-      <a href="photos.html#img13"><img src="IMG_13.jpg" alt="Image 13" /></a>
-      <a href="photos.html#img14"><img src="IMG_14.jpg" alt="Image 14" /></a>
-      <a href="photos.html#img15"><img src="IMG_15.jpg" alt="Image 15" /></a>
-      <a href="photos.html#img16"><img src="IMG_16.jpg" alt="Image 16" /></a>
-  
-    </div>
-  </div>
-
-  <!-- Footer logo at bottom -->
-  <footer class="footer">
-    <a href="secret.html">
-      <img src="PM LOGO copy 4.png" alt="PM Logo" />
-    </a>
-  </footer>
-
+  <a class="back-link" href="index.html">&larr; Back to Home</a>
 </body>
 </html>
