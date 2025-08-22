@@ -5,59 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Music Links</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body, html {
+    body {
       margin: 0;
       padding: 0;
+      height: 100vh;
+      background-color: white;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    .container {
-      position: relative;
-      width: 100%;
-      height: auto;
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      text-align: center;
     }
 
-    .bg-img {
-      width: 100%;
-      display: block;
-    }
-
-    .link {
-      position: absolute;
-      width: 300px;
-      height: 67px;
-      cursor: pointer;
-      /* border: 2px solid red; */ /* Uncomment to see boxes */
-    }
-
-    .spotify {
-      top: 620px;
-      left: 230px;
+    a {
+      text-decoration: none;
+      font-size: 1.5rem;
+      font-weight: bold;
     }
 
     .apple {
-      top: 855px;
-      left: 250px;
+      color: red;
+    }
+
+    .spotify {
+      color: green;
     }
 
     .soundcloud {
-      top: 1080px;
-      left: 230px;
+      color: orange;
+    }
+
+    a:hover {
+      opacity: 0.75;
     }
   </style>
 </head>
 <body>
-
-  <div class="container">
-    <img src="IMG_7789.jpg" alt="Music Menu" class="bg-img" />
-
-    <a href="https://open.spotify.com/artist/247dlsOKRglAdfudQLdCPG" target="_blank" class="link spotify"></a>
-    <a href="https://music.apple.com/us/artist/pm/1827761643" target="_blank" class="link apple"></a>
-    <a href="https://soundcloud.com/prince-marco-278939286" target="_blank" class="link soundcloud"></a>
+  <div class="links">
+    <a href="https://music.apple.com/us/artist/pm/1827761643" target="_blank" class="apple">Apple Music</a>
+    <a href="https://open.spotify.com/artist/247dlsOKRglAdfudQLdCPG" target="_blank" class="spotify">Spotify</a>
+    <a href="https://soundcloud.com/prince-marco-278939286" target="_blank" class="soundcloud">SoundCloud</a>
   </div>
-
 </body>
 </html>
