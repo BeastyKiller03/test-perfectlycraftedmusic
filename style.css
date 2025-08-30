@@ -180,6 +180,52 @@ body {
   }
 }
 
+/* Video thumbs inside index gallery */
+.video-thumb {
+  position: relative;
+  display: block;
+  line-height: 0;
+}
+
+.video-thumb img {
+  display: block;
+  width: 300px;   /* matches your photo size */
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+  transition: transform .3s ease, opacity .3s ease;
+}
+
+.video-thumb:hover img {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+.play-badge {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 0 2px 8px rgba(0,0,0,.6);
+  opacity: 0;
+  transition: opacity .2s ease;
+  pointer-events: none;
+}
+
+.video-thumb:hover .play-badge {
+  opacity: 1;
+}
+
+/* Mobile: thumbnails shrink into the grid like photos */
+@media (max-width: 768px) {
+  .video-thumb img {
+    width: 100%;
+  }
+}
+
+
 /* Optional: 3 columns on bigger phones (uncomment if you want)
 @media (min-width: 600px) and (max-width: 768px) {
   .gallery-row {
