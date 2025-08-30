@@ -15,7 +15,8 @@
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       background-color: #fff;
       width: 100%;
-      overflow-x: hidden;
+      height: 100%;
+      overflow-x: auto;
     }
 
     :root {
@@ -26,20 +27,22 @@
       scroll-margin-top: 100px;
     }
 
-    /* Fixed vertical sidebar menu */
+    /* Sidebar Menu (fixed always) */
     .header {
+      width: 200px;
+      padding: 40px 20px;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
       position: fixed;
       top: 0;
       left: 0;
-      width: 200px;
       height: 100vh;
-      padding: 40px 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      gap: 15px;
-      background-color: white;
+      overflow-y: auto;
       z-index: 1000;
+      border-right: 1px solid #eee;
     }
 
     .header a {
@@ -52,7 +55,7 @@
       opacity: 0.6;
     }
 
-    /* Top-right floating logo */
+    /* Top-right logo */
     .top-corner-title {
       position: fixed;
       top: 20px;
@@ -65,39 +68,38 @@
       text-transform: lowercase;
       color: #000;
       opacity: 0.9;
-      margin: 0;
     }
 
-    /* Image gallery */
+    /* Gallery layout */
     .gallery {
+      margin-left: 240px;
       padding: 2rem 1rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      z-index: 1;
+      gap: 2rem;
     }
 
     .gallery img {
-      width: auto;
-      max-width: 90%;
+      width: 100%;
+      max-width: 800px;
       height: auto;
       display: block;
-      margin-bottom: 2rem;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
       border-radius: 4px;
     }
 
+    /* Mobile override: allow horizontal scrolling without shrinking */
     @media (max-width: 768px) {
-       body {
+      body {
         overflow-x: auto;
-  }
+      }
 
       .gallery {
-        margin-left: 220px; /* same as desktop */
-        min-width: 600px;   /* ensures full image space */
-  }
-}
-
+        margin-left: 240px; /* keep spacing from sidebar */
+        min-width: 600px;   /* ensures images fit without cutting */
+      }
+    }
   </style>
 </head>
 <body>
