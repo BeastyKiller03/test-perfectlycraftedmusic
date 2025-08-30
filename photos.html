@@ -5,47 +5,128 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Photos - PerfectlyCraftedMusic</title>
   <style>
-    html {
-     
+    * {
+      box-sizing: border-box;
     }
 
-    body {
+    html, body {
       margin: 0;
-      background-color: #fff;
+      padding: 0;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-color: #fff;
+      width: 100%;
+      overflow-x: hidden;
     }
 
+    :target {
+      scroll-margin-top: 100px;
+    }
+
+    /* Sticky vertical sidebar for ALL screen sizes */
+    .header {
+      width: 200px;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 40px 20px;
+      gap: 15px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      overflow-y: auto;
+      z-index: 1000;
+      border-right: 1px solid #ddd;
+    }
+
+    .header a {
+      color: #000;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .header a:hover {
+      opacity: 0.6;
+    }
+
+    /* Top-right floating logo */
+    .top-corner-title {
+      position: fixed;
+      top: 20px;
+      right: 30px;
+      z-index: 1001;
+    }
+
+    .top-corner-title p {
+      font-size: 0.8rem;
+      text-transform: lowercase;
+      color: #000;
+      opacity: 0.9;
+    }
+
+    /* Main photo area */
     .gallery {
+      margin-left: 240px;
+      padding: 2rem 1rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 2rem;
       gap: 2rem;
     }
 
     .gallery img {
-  width: 100%;
-  max-width: 600px;
-  height: 100%;
-  object-fit: contain;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
-
-    .back-link {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
       display: block;
-      text-align: center;
-      margin-top: 2rem;
-      font-size: 1rem;
-      color: black;
-      text-decoration: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      border-radius: 4px;
     }
 
-    .back-link:hover {
-      opacity: 0.6;
+    /* Mobile: keep same layout */
+    @media (max-width: 768px) {
+      .header {
+        width: 160px;
+        padding: 20px 15px;
+      }
+
+      .gallery {
+        margin-left: 180px;
+        padding: 1rem;
+      }
+
+      .top-corner-title {
+        top: 10px;
+        right: 15px;
+      }
+
+      .top-corner-title p {
+        font-size: 0.7rem;
+      }
+
+      .header a {
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="top-corner-title">
+    <p>perfectlycraftedmusic</p>
+  </div>
+
+  <div class="header">
+    <a href="index.html">Home</a>
+    <a href="videos.html">Videos</a>
+    <a href="music.html">Music</a>
+    <a href="photos.html">Photographs</a>
+    <a href="https://www.instagram.com/perfectlycraftedmusic/" target="_blank">Instagram</a>
+    <a href="https://tumblr.com/blog/marcoalexismaria" target="_blank">Tumblr</a>
+    <a href="mailto:perfectlycraftedmusic@gmail.com">Email</a>
+    <a href="background.html">Background</a>
+  </div>
+
   <div class="gallery">
     <img id="img1" src="IMG_1.jpg" alt="Image 1" loading="lazy">
     <img id="img2" src="IMG_2.jpg" alt="Image 2" loading="lazy">
@@ -63,9 +144,21 @@
     <img id="img14" src="IMG_14.jpg" alt="Image 14" loading="lazy">
     <img id="img15" src="IMG_15.jpg" alt="Image 15" loading="lazy">
     <img id="img16" src="IMG_16.jpg" alt="Image 16" loading="lazy">
-   
   </div>
 
-  <a class="back-link" href="index.html">&larr; Back to Home</a>
+  <script>
+    // Jump directly to image target if accessed via anchor (e.g., #img5)
+    window.addEventListener('load', () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const el = document.querySelector(hash);
+        if (el) {
+          setTimeout(() => {
+            el.scrollIntoView({ behavior: 'auto', block: 'start' });
+          }, 100);
+        }
+      }
+    });
+  </script>
 </body>
 </html>
