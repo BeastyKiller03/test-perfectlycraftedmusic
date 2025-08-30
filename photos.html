@@ -26,20 +26,19 @@
       scroll-margin-top: 100px;
     }
 
-    /* Sidebar Menu (fixed on all screen sizes) */
+    /* Fixed vertical sidebar menu */
     .header {
-      width: 200px;
-      padding: 40px 20px;
-      background-color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 15px;
       position: fixed;
       top: 0;
       left: 0;
+      width: 200px;
       height: 100vh;
-      overflow-y: auto;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 15px;
+      background-color: white;
       z-index: 1000;
     }
 
@@ -53,7 +52,7 @@
       opacity: 0.6;
     }
 
-    /* Top-right logo */
+    /* Top-right floating logo */
     .top-corner-title {
       position: fixed;
       top: 20px;
@@ -66,29 +65,44 @@
       text-transform: lowercase;
       color: #000;
       opacity: 0.9;
+      margin: 0;
     }
 
-    /* Gallery layout */
+    /* Image gallery */
     .gallery {
-      margin-left: 240px;
       padding: 2rem 1rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 2rem;
+      z-index: 1;
     }
 
     .gallery img {
-      width: 100%;
-      max-width: 800px;
+      width: auto;
+      max-width: 90%;
       height: auto;
       display: block;
+      margin-bottom: 2rem;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
       border-radius: 4px;
     }
 
-    /* Do NOT override sidebar on mobile — keep it fixed */
-    /* No @media query needed here */
+    /* Manual left margin to avoid overlap with fixed menu */
+    @media (min-width: 600px) {
+      .gallery {
+        margin-left: 220px;
+
+    @media (max-width: 768px) {
+       body {
+        overflow-x: auto;
+  }
+
+      .gallery {
+        margin-left: 220px; /* same as desktop */
+        min-width: 600px;   /* ensures full image space */
+  }
+}
+
   </style>
 </head>
 <body>
