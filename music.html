@@ -2,55 +2,114 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Music Links</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Music - PerfectlyCraftedMusic</title>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      background-color: white;
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      background: #fff; color: #000;
+      overflow-x: hidden;
     }
 
-    .links {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
+    /* Top-right title (fixed) */
+    .top-corner-title {
+      position: fixed; top: 20px; right: 30px; z-index: 1001;
+    }
+    .top-corner-title p {
+      margin: 0; font-size: 0.8rem; text-transform: lowercase; opacity: 0.9;
+    }
+
+    /* Overlay sidebar menu (same as photos/videos pages) */
+    .header {
+      position: fixed; top: 0; left: 0;
+      width: 200px; height: 100vh;
+      padding: 40px 20px;
+      display: flex; flex-direction: column; gap: 15px;
+      background: transparent;           /* change to rgba(255,255,255,.85) if you want a veil */
+      z-index: 1002;
+    }
+    .header a {
+      color: #000; text-decoration: none; font-size: 1rem;
+    }
+    .header a:hover { opacity: .6; }
+
+    /* Center content column */
+    .music-wrap {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1rem;
+      display: flex; flex-direction: column; align-items: center; gap: 1.2rem;
+      z-index: 1; /* sits under the menu */
       text-align: center;
     }
 
-    a {
-      text-decoration: none;
-      font-size: 1.5rem;
-      font-weight: bold;
+    .music-title {
+      margin-top: 1rem;
+      font-size: 1.25rem;
+      letter-spacing: .02em;
     }
 
-    .apple {
-      color: red;
+    .links {
+      display: flex; flex-direction: column; gap: 0.9rem;
+      margin-top: .5rem;
+    }
+    .links a {
+      text-decoration: none; font-size: 1.1rem; transition: opacity .2s ease;
+    }
+    .links a:hover { opacity: .7; }
+
+    /* Brand tints (adjust if you want monochrome) */
+    .apple   { color: #ff0033; }   /* red */
+    .spotify { color: #1db954; }   /* green */
+    .sc      { color: #ff5500; }   /* orange */
+
+    /* Optional note or future services */
+    .note {
+      margin-top: 1.2rem; font-size: .9rem; opacity: .7;
     }
 
-    .spotify {
-      color: green;
-    }
-
-    .soundcloud {
-      color: orange;
-    }
-
-    a:hover {
-      opacity: 0.75;
+    @media (max-width: 768px) {
+      .music-wrap { padding: 1.75rem 1rem; }
+      .music-title { font-size: 1.1rem; }
+      .links a { font-size: 1rem; }
     }
   </style>
 </head>
 <body>
-  <div class="links">
-    <a href="https://music.apple.com/us/artist/pm/1827761643" target="_blank" class="apple">Apple Music</a>
-    <a href="https://open.spotify.com/artist/247dlsOKRglAdfudQLdCPG" target="_blank" class="spotify">Spotify</a>
-    <a href="https://soundcloud.com/prince-marco-278939286" target="_blank" class="soundcloud">SoundCloud</a>
+
+  <!-- Top-right logo text -->
+  <div class="top-corner-title">
+    <p>perfectlycraftedmusic</p>
   </div>
+
+  <!-- Overlay sidebar menu (same links as index) -->
+  <div class="header">
+    <a href="index.html">Home</a>
+    <a href="videos.html">Videos</a>
+    <a href="music.html">Music</a>
+    <a href="photos.html">Photographs</a>
+    <a href="https://www.instagram.com/perfectlycraftedmusic/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://tumblr.com/blog/marcoalexismaria" target="_blank" rel="noopener">Tumblr</a>
+    <a href="mailto:perfectlycraftedmusic@gmail.com">Email</a>
+    <a href="background.html">Background</a>
+  </div>
+
+  <!-- Centered content -->
+  <div class="music-wrap">
+    <div class="music-title">listen to :pm</div>
+
+    <div class="links">
+      <a class="apple"   href="https://music.apple.com/us/artist/pm/1827761643" target="_blank" rel="noopener">Apple Music</a>
+      <a class="spotify" href="https://open.spotify.com/artist/247dlsOKRglAdfudQLdCPG" target="_blank" rel="noopener">Spotify</a>
+      <a class="sc"      href="https://soundcloud.com/prince-marco-278939286" target="_blank" rel="noopener">SoundCloud</a>
+    </div>
+
+    <!-- Optional blurb -->
+    <!-- <div class="note">more platforms soon…</div> -->
+  </div>
+
 </body>
 </html>
